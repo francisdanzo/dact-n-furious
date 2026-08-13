@@ -24,7 +24,7 @@ Utilisation sur ordinateur avec clavier physique, en sessions de quelques minute
 
 ## Capabilities and Constraints
 
-Le site est une expérience front-end autonome sans backend. Il propose deux parcours d'âge, un catalogue de niveaux, une course chronométrée, des quêtes, des statistiques de vitesse/précision et une persistance locale via localStorage. Les données affichées sont des données de démonstration ou générées localement, pas des résultats certifiés.
+Le site est une expérience front-end autonome sans backend. Il propose deux parcours d'âge, neuf cours guidés, six défis, plusieurs règles de course, un combo, une nitro, des rivaux simulés, un garage de véhicules, des statistiques de vitesse/précision et une persistance locale via localStorage. Il détecte les dispositions AZERTY et QWERTY, adapte le clavier visuel et sélectionne automatiquement un corpus français ou anglais, tout en laissant un choix manuel. Les effets sonores sont optionnels. Les données affichées sont générées localement et ne constituent pas des résultats certifiés ni un classement distant.
 
 ## Brand Commitments
 

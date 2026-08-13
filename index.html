@@ -3,34 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#101827" />
-  <title>Dact’n Furirous — apprends à taper en jouant</title>
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="Dact’n Furirous, le jeu de course pour apprendre à taper vite et juste." />
+  <title>Dact’n Furirous — tape, accélère, maîtrise</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!--
-  THESIS: Une piste de course sert de tableau de bord vivant ; on comprend, choisit et joue sans écran d'accueil passif.
-  OWN-WORLD: Garage arcade bleu nuit, lignes de piste citron, corail énergique et panneaux techniques chaleureux.
-  STORY: Je choisis mon parcours, je vois mon prochain objectif, puis je tape pour faire filer mon bolide.
-  FIRST VIEWPORT: Barre haute compacte, grande piste à gauche, cockpit de progression à droite, CTA Lancer une course au-dessus du pli.
-  FORM: Surface Operate/Experience, staging cockpit + piste, construite comme un tableau de bord jouable plutôt qu'un catalogue de cartes.
+  THESIS: Le clavier est un moteur ; chaque bonne touche produit immédiatement vitesse, maîtrise et progression.
+  OWN-WORLD: Garage arcade nocturne, asphalte bleu, signalétique citron, alertes corail et interfaces de télémétrie nettes.
+  STORY: Le pilote reprend son parcours, apprend un geste, choisit un défi puis transforme sa précision en accélération.
+  FIRST VIEWPORT: Navigation compacte, statut du pilote, grande piste vivante et panneau de mission avec départ immédiat.
+  FORM: Cockpit éducatif Operate/Experience ; la course est le mécanisme central, les cours et défis sont ses voies d’accès.
   -->
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#accueil" data-route="home" aria-label="Dact’n Furirous, accueil">
-        <span class="brand-mark">⌨</span><span>Dact’n <b>Furious</b></span>
-      </a>
+      <button class="brand" data-route="home" aria-label="Dact’n Furirous, accueil">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Dact’n <b>Furirous</b></span>
+      </button>
       <nav class="main-nav" aria-label="Navigation principale">
-        <button class="nav-link active" data-route="home">Accueil</button>
-        <button class="nav-link" data-route="levels">Catalogue</button>
-        <button class="nav-link" data-route="quests">Quêtes</button>
+        <button class="nav-link active" data-route="home"><span>Accueil</span></button>
+        <button class="nav-link" data-route="courses"><span>Cours</span></button>
+        <button class="nav-link" data-route="challenges"><span>Défis</span></button>
+        <button class="nav-link" data-route="garage"><span>Garage</span></button>
       </nav>
       <div class="top-actions">
-        <button class="sound-button" aria-label="Activer ou désactiver le son" title="Son">♬</button>
-        <button class="profile-chip" data-route="profile"><span class="avatar">Z</span><span class="profile-name">Zoé</span><span class="chevron">⌄</span></button>
+        <div class="xp-chip" title="Points d’expérience"><span aria-hidden="true">⚡</span><strong id="nav-xp">0</strong></div>
+        <button class="sound-button" data-action="toggle-sound" aria-label="Activer le son" aria-pressed="false"><span aria-hidden="true">♪</span></button>
+        <button class="profile-chip" data-route="profile" aria-label="Ouvrir le profil de Zoé">
+          <span class="avatar">Z</span><span class="profile-name">Zoé</span>
+        </button>
       </div>
     </header>
-
     <main id="app" tabindex="-1"></main>
   </div>
   <div class="toast" role="status" aria-live="polite"></div>

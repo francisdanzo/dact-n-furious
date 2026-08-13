@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-13T11:00:00+02:00",
+  "title": "Design System: Dact’n Furirous",
+  "extensions": {
+    "colorMeta": {
+      "asphalt": { "role": "neutral", "displayName": "Asphalt", "canonical": "#0b1220", "tonalRamp": ["#080d16", "#0b1220", "#172337", "#324158", "#59677a", "#8993a1", "#c2c7ce", "#f2f3f5"] },
+      "asphalt-soft": { "role": "neutral", "displayName": "Asphalt Soft", "canonical": "#111c2e", "tonalRamp": ["#090f19", "#111c2e", "#22334a", "#40516a", "#68778a", "#96a0ad", "#c8ccd2", "#f2f3f4"] },
+      "garage-panel": { "role": "neutral", "displayName": "Garage Panel", "canonical": "#16243a", "tonalRamp": ["#0a111c", "#16243a", "#293c57", "#475a72", "#6d7c8f", "#9aa4b0", "#ccd0d5", "#f3f4f5"] },
+      "garage-raised": { "role": "neutral", "displayName": "Garage Raised", "canonical": "#1d304b", "tonalRamp": ["#0c151f", "#1d304b", "#334862", "#52657b", "#788695", "#a4abb4", "#d0d3d7", "#f4f5f5"] },
+      "warm-paper": { "role": "neutral", "displayName": "Warm Paper", "canonical": "#f3f2eb", "tonalRamp": ["#24231f", "#44423b", "#68665e", "#908e85", "#b8b6ae", "#d4d2cb", "#e8e7e0", "#f8f7f2"] },
+      "telemetry-muted": { "role": "neutral", "displayName": "Telemetry Muted", "canonical": "#aab7c9", "tonalRamp": ["#18202b", "#303c4c", "#4e5c6e", "#718093", "#94a2b4", "#b4bfce", "#d6dce4", "#f3f5f7"] },
+      "turbo-lime": { "role": "primary", "displayName": "Turbo Lime", "canonical": "#dcf35e", "tonalRamp": ["#263000", "#455800", "#687f0e", "#8fa82d", "#b5ce45", "#dcf35e", "#ebf89d", "#f8fddd"] },
+      "turbo-lime-dark": { "role": "primary", "displayName": "Turbo Lime Dark", "canonical": "#9db52b", "tonalRamp": ["#202900", "#3a4a00", "#596b0d", "#788d1b", "#9db52b", "#bfd25d", "#dce69b", "#f5f8dd"] },
+      "engine-coral": { "role": "secondary", "displayName": "Engine Coral", "canonical": "#ff6854", "tonalRamp": ["#3b0600", "#68150c", "#982a1d", "#c84534", "#ef5c49", "#ff8171", "#ffb4aa", "#ffe9e5"] },
+      "circuit-cyan": { "role": "secondary", "displayName": "Circuit Cyan", "canonical": "#59d6d1", "tonalRamp": ["#003331", "#005b58", "#07847f", "#2baca7", "#59d6d1", "#83e7e2", "#b5f2ef", "#e6fbfa"] },
+      "phantom-violet": { "role": "tertiary", "displayName": "Phantom Violet", "canonical": "#9e83ff", "tonalRamp": ["#1c0c49", "#352075", "#513ca3", "#715cd0", "#9e83ff", "#bba8ff", "#d7ccff", "#f2edff"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Promesses, entrées de section et podium." },
+      "headline": { "displayName": "Headline", "purpose": "Cours, défis et missions." },
+      "body": { "displayName": "Body", "purpose": "Instructions et explications." },
+      "label": { "displayName": "Telemetry Label", "purpose": "États, modules et mesures." }
+    },
+    "shadows": [
+      { "name": "garage-lift", "value": "0 24px 60px rgba(2,7,16,.32)", "purpose": "Grandes scènes et consoles principales." },
+      { "name": "turbo-press", "value": "0 7px 0 #9db52b", "purpose": "Retour tactile du bouton primaire." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(.16,1,.3,1)", "purpose": "Arrivées, changements d’état et progression." },
+      { "name": "duration-feedback", "value": "120ms", "purpose": "Pression et feedback immédiat." },
+      { "name": "duration-state", "value": "240ms", "purpose": "État de contrôle et de panneau." },
+      { "name": "duration-focal", "value": "600ms", "purpose": "Compte à rebours, succès et podium." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "980px" },
+      { "name": "mobile", "value": "650px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Turbo Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Action principale tactile pour commencer ou reprendre.",
+      "html": "<button class=\"ds-turbo-button\">Lancer la course →</button>",
+      "css": ".ds-turbo-button{min-height:46px;padding:0 19px;border:0;border-radius:9px;background:#dcf35e;color:#0b1220;font:800 15px 'DM Sans',sans-serif;box-shadow:0 7px 0 #9db52b;transition:transform 120ms,box-shadow 240ms;cursor:pointer}.ds-turbo-button:hover{transform:translateY(-2px)}.ds-turbo-button:active{transform:translateY(3px) scale(.98);box-shadow:0 2px 0 #9db52b}.ds-turbo-button:focus-visible{outline:3px solid #dcf35e;outline-offset:3px}"
+    },
+    {
+      "name": "Garage Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Action secondaire dans une surface sombre.",
+      "html": "<button class=\"ds-garage-button\">Continuer mon cours</button>",
+      "css": ".ds-garage-button{min-height:46px;padding:0 19px;border:1px solid rgba(255,255,255,.11);border-radius:9px;background:#1d304b;color:#f3f2eb;font:800 15px 'DM Sans',sans-serif;transition:transform 120ms,background 120ms;cursor:pointer}.ds-garage-button:hover{transform:translateY(-2px);background:#263c59}.ds-garage-button:active{transform:translateY(2px)}.ds-garage-button:focus-visible{outline:3px solid #dcf35e;outline-offset:3px}"
+    },
+    {
+      "name": "Telemetry Chip",
+      "kind": "chip",
+      "description": "Mesure locale compacte du cockpit.",
+      "html": "<span class=\"ds-telemetry\"><small>VITESSE</small><strong>42 <i>MPM</i></strong></span>",
+      "css": ".ds-telemetry{display:inline-flex;flex-direction:column;gap:3px;padding:12px 18px;background:#f3f2eb;color:#0b1220}.ds-telemetry small{color:#667286;font:800 9px 'DM Sans',sans-serif;letter-spacing:.1em}.ds-telemetry strong{font:800 25px 'Outfit',sans-serif}.ds-telemetry i{font:700 10px 'DM Sans',sans-serif;color:#667286;font-style:normal}"
+    },
+    {
+      "name": "Lesson Row",
+      "kind": "custom",
+      "description": "Étape de cours avec état, contenu et progression.",
+      "html": "<div class=\"ds-lesson\"><span>01</span><div><small>FONDATIONS · 3 MIN</small><strong>La ligne de départ</strong><p>F et J sont tes repères</p></div><button>→</button></div>",
+      "css": ".ds-lesson{display:grid;grid-template-columns:34px 1fr 34px;gap:14px;align-items:center;padding:14px;border-top:1px solid rgba(255,255,255,.11);background:#0b1220;color:#f3f2eb;font-family:'DM Sans',sans-serif}.ds-lesson>span{width:31px;height:31px;border:1px solid rgba(255,255,255,.11);border-radius:50%;display:grid;place-items:center;color:#aab7c9;font-size:11px}.ds-lesson small,.ds-lesson p{display:block;color:#aab7c9;font-size:10px;margin:0}.ds-lesson strong{display:block;font:700 18px 'Outfit',sans-serif;margin:3px 0}.ds-lesson button{width:34px;height:30px;border:0;border-radius:7px;background:#1d304b;color:#dcf35e}.ds-lesson button:hover{background:#dcf35e;color:#0b1220}.ds-lesson button:focus-visible{outline:3px solid #dcf35e;outline-offset:3px}"
+    },
+    {
+      "name": "Typing Prompt",
+      "kind": "input",
+      "description": "Lecture du texte courant pendant la course.",
+      "html": "<div class=\"ds-prompt\"><span>Le petit </span><b>r</b>enard file sous les étoiles.</div>",
+      "css": ".ds-prompt{padding:18px;background:#f3f2eb;color:#89919a;font:600 24px/1.5 'Outfit',sans-serif;white-space:nowrap;overflow:hidden}.ds-prompt span{color:#6e812c}.ds-prompt b{color:#0b1220;box-shadow:inset 0 -4px #ff6854}"
+    },
+    {
+      "name": "Keyboard Profile",
+      "kind": "custom",
+      "description": "Disposition détectée, langue de frappe et accès au recalibrage.",
+      "html": "<div class=\"ds-keyboard-profile\"><span>Q</span><div><small>CLAVIER DÉTECTÉ</small><strong>QWERTY · textes EN</strong></div><button>Recalibrer</button></div>",
+      "css": ".ds-keyboard-profile{display:flex;align-items:center;gap:13px;padding:14px 16px;border-radius:12px;background:#16243a;color:#f3f2eb;font-family:'DM Sans',sans-serif}.ds-keyboard-profile>span{width:43px;height:36px;display:grid;place-items:center;border-radius:8px;background:#dcf35e;color:#0b1220;font:800 16px 'Outfit',sans-serif}.ds-keyboard-profile div{flex:1}.ds-keyboard-profile small{display:block;color:#aab7c9;font-size:9px;letter-spacing:.1em}.ds-keyboard-profile strong{display:block;margin-top:3px}.ds-keyboard-profile button{padding:8px 10px;border:0;border-radius:7px;background:#1d304b;color:#aab7c9;font-weight:800}.ds-keyboard-profile button:hover{background:#dcf35e;color:#0b1220}.ds-keyboard-profile button:focus-visible{outline:3px solid #dcf35e;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Le garage arcade nocturne",
+    "overview": "Le produit ressemble à un cockpit de course pédagogique, pas à un tableau de bord scolaire décoré. L'asphalte bleu nuit accueille l'essentiel de la navigation ; le papier chaud est réservé aux zones où l'on apprend ou tape.",
+    "keyCharacteristics": ["piste dominante", "signalétique citron", "surfaces de télémétrie nettes", "véhicules géométriques", "résultats théâtraux", "lecture immédiate"],
+    "rules": [{ "name": "The Signal Rule", "body": "Le citron indique toujours une action possible ou une progression positive ; il ne sert jamais de décoration aléatoire.", "section": "colors" }],
+    "dos": ["Do: relier chaque animation à la vitesse, au feedback ou à la progression.", "Do: montrer la précision au même niveau que la vitesse.", "Do: respecter prefers-reduced-motion et permettre la pause.", "Do: rendre la disposition et la langue de frappe visibles avant le départ."],
+    "donts": ["Don't: masquer une leçon derrière une animation obligatoire.", "Don't: attribuer une victoire de défi si son objectif chiffré n'est pas atteint.", "Don't: inventer un classement distant ou des adversaires humains ; les rivaux sont locaux et simulés."]
+  }
+}

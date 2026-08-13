@@ -1,124 +1,164 @@
 ---
 name: Dact’n Furirous
-description: Apprends à taper en jouant sur une piste de course.
+description: Un cockpit de dactylographie où chaque touche devient de la vitesse.
 colors:
-  ink: "#101827"
-  panel: "#1c2a40"
-  panel-raised: "#22334d"
-  paper: "#f5f4ee"
-  muted: "#aab6c7"
-  lime: "#d9f25e"
-  coral: "#ff6b57"
-  cyan: "#66d7d3"
+  asphalt: "#0b1220"
+  asphalt-soft: "#111c2e"
+  garage-panel: "#16243a"
+  garage-raised: "#1d304b"
+  warm-paper: "#f3f2eb"
+  telemetry-muted: "#aab7c9"
+  turbo-lime: "#dcf35e"
+  turbo-lime-dark: "#9db52b"
+  engine-coral: "#ff6854"
+  circuit-cyan: "#59d6d1"
+  phantom-violet: "#9e83ff"
 typography:
   display:
     fontFamily: "Outfit, system-ui, sans-serif"
-    fontSize: "clamp(37px, 5vw, 63px)"
+    fontSize: "clamp(42px, 5.4vw, 76px)"
+    fontWeight: 800
+    lineHeight: 0.94
+    letterSpacing: "-0.035em"
+  headline:
+    fontFamily: "Outfit, system-ui, sans-serif"
+    fontSize: "30px"
     fontWeight: 700
-    lineHeight: 0.96
-    letterSpacing: "-0.05em"
+    lineHeight: 1.05
+    letterSpacing: "-0.035em"
   body:
     fontFamily: "DM Sans, system-ui, sans-serif"
     fontSize: "15px"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.6
+  label:
+    fontFamily: "DM Sans, system-ui, sans-serif"
+    fontSize: "11px"
+    fontWeight: 800
+    letterSpacing: "0.1em"
 rounded:
-  sm: "8px"
-  md: "12px"
-  lg: "18px"
+  control: "9px"
+  compact: "10px"
+  panel: "14px"
+  stage: "16px"
 spacing:
-  sm: "8px"
-  md: "16px"
+  xs: "6px"
+  sm: "10px"
+  md: "18px"
   lg: "28px"
+  xl: "46px"
 components:
   button-primary:
-    backgroundColor: "{colors.lime}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.sm}"
-    padding: "13px 18px"
+    backgroundColor: "{colors.turbo-lime}"
+    textColor: "{colors.asphalt}"
+    rounded: "{rounded.control}"
+    padding: "0 19px"
+    height: "46px"
   button-secondary:
-    backgroundColor: "{colors.panel-raised}"
-    textColor: "{colors.paper}"
-    rounded: "{rounded.sm}"
-    padding: "13px 18px"
+    backgroundColor: "{colors.garage-raised}"
+    textColor: "{colors.warm-paper}"
+    rounded: "{rounded.control}"
+    padding: "0 19px"
+    height: "46px"
+  panel-dark:
+    backgroundColor: "{colors.garage-panel}"
+    textColor: "{colors.warm-paper}"
+    rounded: "{rounded.panel}"
+  panel-paper:
+    backgroundColor: "{colors.warm-paper}"
+    textColor: "{colors.asphalt}"
+    rounded: "{rounded.stage}"
 ---
 
 # Design System: Dact’n Furirous
 
 ## Overview
 
-**Creative North Star: “Le garage arcade”**
+**Creative North Star: “Le garage arcade nocturne”**
 
-Dact’n Furirous est un cockpit d'apprentissage qui donne envie de démarrer en moins de dix secondes. Le bleu nuit crée la profondeur d'une piste éclairée en intérieur ; le citron est la ligne de conduite et le corail signale l'énergie, la vitesse et les moments de résultat. L'interface reste dense mais lisible : les informations utiles sont au bord de l'action, jamais dans un mur de cartes.
+Le produit ressemble à un cockpit de course pédagogique, pas à un tableau de bord scolaire décoré. L'asphalte bleu nuit accueille l'essentiel de la navigation ; le papier chaud est réservé aux zones où l'on apprend ou tape. Les pistes, bolides dessinés en CSS et panneaux de télémétrie sont des contenus fonctionnels : ils expliquent la progression autant qu'ils donnent du caractère.
 
-**Key Characteristics:** piste visible, surfaces techniques en tons bleus, accents citron/corail, humour léger, feedback immédiat.
+**Key Characteristics:** piste dominante, signalétique citron, surfaces de télémétrie nettes, véhicules géométriques, résultats théâtraux, lecture immédiate.
 
 ## Colors
 
-Palette pleine : le bleu nuit porte l'espace, le citron porte l'action et le corail porte la tension de course.
+La couleur suit la mécanique du jeu : citron pour agir et progresser, corail pour la tension, cyan pour le contrôle, violet pour les récompenses avancées.
 
 ### Primary
-- **Citron turbo** (#d9f25e): action principale, progression et objectifs atteints.
+- **Turbo Lime** (#dcf35e): départ, progression, focus, record et victoire.
+- **Asphalt** (#0b1220): scène principale et texte sur surfaces claires.
 
 ### Secondary
-- **Corail moteur** (#ff6b57): rival, erreurs, énergie et résultats gagnés.
-- **Cyan circuit** (#66d7d3): signal secondaire pour les surfaces de piste.
+- **Engine Coral** (#ff6854): erreurs, défis de vitesse et deuxième véhicule.
+- **Circuit Cyan** (#59d6d1): précision, nitro et troisième véhicule.
+- **Phantom Violet** (#9e83ff): contenu expert et véhicule rare.
 
 ### Neutral
-- **Bleu nuit** (#101827): fond et texte sombre.
-- **Bleu panneau** (#1c2a40 / #22334d): panneaux et contrôles.
-- **Papier chaud** (#f5f4ee): surfaces de lecture et zone de frappe.
-- **Brume** (#aab6c7): texte secondaire sur fond sombre.
+- **Garage Panel** (#16243a): unités opérationnelles.
+- **Garage Raised** (#1d304b): contrôles secondaires.
+- **Warm Paper** (#f3f2eb): cours, frappe et télémétrie.
+- **Telemetry Muted** (#aab7c9): métadonnées lisibles sur fond sombre.
+
+**The Signal Rule.** Le citron indique toujours une action possible ou une progression positive ; il ne sert jamais de décoration aléatoire.
 
 ## Typography
 
 **Display Font:** Outfit (with system-ui fallback)
 **Body Font:** DM Sans (with system-ui fallback)
 
-**Character:** Outfit donne aux titres une silhouette compacte de tableau de bord ; DM Sans garde les instructions et statistiques très lisibles.
+**Character:** Outfit donne aux titres la masse compacte d'une affiche de course. DM Sans garde les conseils et données lisibles pendant l'action.
 
 ### Hierarchy
-- **Display** (700, clamp 37–63px, 0.96): promesse du cockpit et titre de course.
-- **Headline** (700, 31–42px, 1): titres de section et résultat.
-- **Body** (400–600, 13–15px, 1.55): instructions et descriptions.
-- **Label** (700, 11–12px, tracked uppercase): circuits, catégories et métadonnées.
+- **Display** (800, 42–76px, 0.94): promesse, victoire et entrée de section.
+- **Headline** (700, 30px, 1.05): missions, cours et défis.
+- **Body** (400–600, 15–16px, 1.6): explications et instructions.
+- **Label** (800, 9–11px, uppercase): télémétrie, module, récompense et état.
 
 ## Layout
 
-Le contenu est limité à 1280px et s'organise en grand écran autour d'une piste dominante à gauche et d'un panneau de commande à droite. Les statistiques et quêtes suivent en bandes courtes. À 800px, tout passe en colonne ; à 520px, la navigation et les métriques se resserrent sans retirer l'action principale.
+La largeur utile est limitée à 1280px. Le premier écran associe une piste large à une console de mission plus étroite. Les pages Cours utilisent une colonne de module fixe et une liste de leçons ; les Défis et le Garage emploient leurs grilles uniquement parce que chaque unité possède un état, une règle et une action. Sous 980px, les compositions passent en colonne. Sous 650px, la navigation occupe une seconde ligne et le cockpit conserve toute sa largeur.
 
 ## Elevation & Depth
 
-La profondeur est hybride : surfaces bleues tonales pour le garage, ombres douces décalées pour les grands blocs qui doivent flotter, et une ombre dure citron sous le bouton principal pour rappeler une commande physique.
-
-### Shadow Vocabulary
-- **Garage lift** (`0 20px 50px rgba(4,11,23,.24)`): stage et panneau principal.
-- **Turbo press** (`0 8px 0 #9cb22d`): bouton principal au repos, disparaît naturellement au clic via son déplacement.
+La profondeur vient des couches de piste, des silhouettes de ville, des ombres décalées et de la perspective. Les grands panneaux utilisent une ombre ambiante (`0 24px 60px rgba(2,7,16,.32)`). Le bouton principal et les touches du clavier ont une ombre dure vers le bas pour suggérer un vrai mécanisme à presser.
 
 ## Shapes
 
-Les grands conteneurs ont des angles 15–18px, les contrôles 8–12px et l'avatar est circulaire. Les bords sont fins et translucides ; les accents ne se déploient pas comme des bordures de cartes, mais comme des lignes de piste ou des ombres de commande.
+Les contrôles utilisent 9–10px ; les contenus opérationnels 14px ; les grandes scènes 16px. Les voitures ont une silhouette asymétrique et basse. Les cercles sont réservés aux statuts, roues, rangs et explosions de succès.
 
 ## Components
 
 ### Buttons
-- **Shape:** tactile, radius 8–10px.
-- **Primary:** citron turbo sur texte bleu nuit, padding 13px 18px.
-- **Hover / Focus:** léger déplacement vertical, contour citron visible au focus clavier.
-- **Secondary / Ghost:** panneau bleu pour les actions secondaires ; ghost citron pour les liens de navigation.
+- **Primary:** Turbo Lime, texte Asphalt, 46px de haut, ombre dure de 7px.
+- **Secondary:** Garage Raised, contour blanc translucide.
+- **Feedback:** pression verticale rapide, focus de 3px visible et libellé d'action explicite.
 
-### Cards / Containers
-- **Corner Style:** 14–18px pour les surfaces de scène, 12–15px pour les quêtes et niveaux.
-- **Behavior:** une seule hiérarchie de surface ; les cartes sont réservées aux unités qui portent un état ou une action.
+### Course Rows
+- Numéro ou validation à gauche, geste au centre, XP et action à droite.
+- Les cours verrouillés restent visibles mais diminués pour rendre le parcours compréhensible.
+
+### Keyboard Profile
+- Bande compacte placée avant l'action principale : disposition détectée, langue active, recalibrage et changement FR/EN.
+- Le profil reste visible dans le cockpit de course sous forme de label de télémétrie.
 
 ### Race Surface
-- **Stage:** piste en perspective avec véhicule animé et arrivée visible.
-- **Typing panel:** zone papier contrastée, texte courant rendu caractère par caractère, champ autofocus et métriques en direct.
+- Trois voies, trois véhicules CSS et progression horizontale continue.
+- La route défile seulement pendant la course ; le combo accélère le rythme visuel et la nitro ajoute un flux lumineux borné à la scène.
+- La zone de frappe est claire, le caractère courant est souligné en corail et les données sont mises à jour en direct.
+
+### Motion Identity
+- **Personality:** énergique.
+- **Signature easing:** `cubic-bezier(.16,1,.3,1)`.
+- **Durations:** 120ms feedback, 240ms état, 600ms moment focal.
+- **Focal sequence:** compte à rebours 3–2–1, démarrage de la piste, montée du combo, nitro puis podium.
+- Les erreurs secouent brièvement le cockpit ; les succès utilisent un pop et une dispersion de particules.
 
 ## Do's and Don'ts
 
-- Do: montrer l'action de course avant les explications.
-- Do: utiliser le citron pour signaler ce que l'utilisateur peut faire maintenant.
-- Do: garder la précision aussi visible que la vitesse.
-- Don't: ajouter de compte, classement ou preuve distante à une expérience locale sans décision produit.
-- Don't: remplacer la piste, le clavier ou le texte de frappe par des blocs décoratifs.
+- Do: relier chaque animation à la vitesse, au feedback ou à la progression.
+- Do: montrer la précision au même niveau que la vitesse.
+- Do: respecter `prefers-reduced-motion` et permettre la pause.
+- Do: rendre la disposition et la langue de frappe visibles avant le départ.
+- Don't: masquer une leçon derrière une animation obligatoire.
+- Don't: attribuer une victoire de défi si son objectif chiffré n'est pas atteint.
+- Don't: inventer un classement distant ou des adversaires humains ; les rivaux sont locaux et simulés.
